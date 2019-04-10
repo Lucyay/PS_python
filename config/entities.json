@@ -1,0 +1,219 @@
+{
+    "L":  {
+        "name": "Lucia",
+        "description": "triste e sconsolata",
+        "color": "magenta"
+    },
+    "M": {
+        "name": "Agnese, madre di Lucia",
+        "color": "red",
+        "description": "cerca di consolare la figlia",
+        "interactions":  {
+            "no-item": {
+                "message": "Agnese: Vai a cercare i testimoni per il matrimonio!"
+            }
+        }
+    },
+    "F": {
+        "name": "Don Abbondio",
+        "description": "da suo comportamento non sembra affatto un prete",
+        "color": "black",
+        "interactions": {
+            "no-item": {
+                "message": "Don Abbondio: Sparisci! Non voglio altri guai!"
+            },
+            "T": {
+                "message": "Don Abbondio: Finalmente sei qui a pagare il tuo debito... vediamo un po' ",
+                "transform": "O",
+                "remove_from_inventory": true
+            }
+        }
+    },
+    "O": {
+        "name": "Don Abbondio",
+        "description": "sembra occupato, e' il tuo momento",
+        "color": "black",
+        "interactions": {
+            "no-item": {
+                "message": "Grazie ai suoi ottimi riflessi, scappa e chiede aiuto",
+                "transform": "X"
+            }
+        }
+    },
+    "T": {
+        "name": "Tonio",
+        "description": "Un tuo caro amico",
+        "color": "cyan",
+        "interactions": {
+            "@": {
+                "message": "Tonio: Se ti faro' da testimone mi pagherai il prestito? Accetto!",
+                "transform":" ",
+                "pickup": true,
+                "remove_from_inventory": true
+            }
+        }
+    },
+    "1": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 1
+            }
+        }
+    },
+    "2": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 2
+            }
+        }
+    },
+    "0": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 0
+            }
+        }
+    },
+    "3": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 3
+            }
+        }
+    },
+
+    "@": {
+        "name": "monete",
+        "description": "Sono sempre utili",
+        "color": "yellow",
+        "interactions": {
+            "no-item": {
+                "message": "possono essere utili per convincere Tonio o Don Abbondio",
+                "pickup": true,
+                "transform": " "
+            }
+        }
+    },
+
+    "C": {
+        "name": "Fra Cristoforo",
+        "description": "Un frate buono che cerca sempre di aiutare i piu' deboli",
+        "color": "black",
+        "interactions": {
+            "no-item": {
+                "message": "sembra stia pregando, meglio non disturbarlo"
+            },
+            "X": {
+                "message":"Fra Cristoforo ti consiglia di scappare a Milano, mentre Lucia e Agnese andranno a Monza",
+                "remove_from_inventory":true,
+                "transform": "R"
+            }
+        }
+    },
+
+    "B": {
+        "name": "Bravo",
+        "description": "meglio stargi lontano",
+        "color": "green"
+    },
+
+    "P": {
+        "name": "Pane",
+        "description": "Un pezzo di pane",
+        "color": "yellow",
+        "interactions": {
+            "no-item": {
+                "message": "Lo mangi",
+                "transform": " "
+            }
+        }
+    },
+
+    "R": {
+        "name": "Lettera di raccomandazioni",
+        "description": "Ti servira' a Milano",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "la raccogli",
+                "pickup": true,
+                "transform": " "
+            }
+        }
+    },
+
+    "X": {
+        "name": "Menico",
+        "description": "e' appena tornato da Pescarenico",
+        "color": "yellow",
+        "interactions": {
+            "no-item": {
+                "message": "Menico: Scappate al monastero! A casa vostra ci sono dei criminali",
+                "transform": " ",
+                "pickup": true
+            }
+        }
+    },
+
+    "4": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": { 
+                "message": "si apre",
+                "move_to_room": 4
+            }
+        }
+    },
+
+    "5": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": { 
+                "message": "si apre",
+                "move_to_room": 5
+            }
+        }  
+    },
+    "6": {
+        "name": "porta",
+        "description": "e' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": { 
+                "message": "si apre",
+                "move_to_room": 6
+            }
+        }  
+    },
+    "G": {
+        "name": "Padre guardiano",
+        "description": "gli chiedi di poter incontrare Padre Bonaventura ma non ti ascolta",
+        "color": "black",
+        "interactions": {
+            "R": {
+                "message": "Padre: Quando padre Bonaventura tornera' in monastero gliela faro' avere",
+                "win": true
+            }
+        }
+    }
+}

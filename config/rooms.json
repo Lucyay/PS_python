@@ -1,0 +1,41 @@
+{
+    "0": {
+        "name": "Casa Mondella",
+        "description": "C'e' molta agitazione a causa del matrimonio a sorpresa",
+        "color": "white"
+    },
+
+    "1": {
+        "name": "Casa di Don Abbondio",
+        "description": "E' tutto molto in ordine",
+        "color": "white"
+    },
+    
+    "2": {
+        "name": "Piazza del paese",
+        "description": "affollata come sempre",
+        "color": "green"
+    },
+
+    "3": {
+        "name": "Osteria",
+        "description": "Si mangia molto bene qui",
+        "color": "yellow"
+    },
+
+   "4": {
+        "name": "Monastero",
+        "description": "Grande e silenzioso",
+        "color": "blue"
+    },
+    "5": {
+        "name": "Milano",
+        "description": "C'e' qualcosa di strano",
+        "color": "white"
+    },
+    "6": {
+        "name": "Monastero di Milano",
+        "description": "Grande e silenzioso",
+        "color": "blue"
+    }
+}
