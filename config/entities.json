@@ -1,9 +1,70 @@
 {
+    "*":{
+        "name": "un cittadino qualsiasi",
+        "description": "uno dei tanti popolani della Lombardia",
+        "color":"red",
+        "interactions": {
+            "no-item": {
+                "message": "x: Buongiorno."
+            },
+            "@": {
+                "message": "x: Lei e' molto generoso, grazie dell'offerta!",
+                "remove_from_inventory": true
+            }
+        }
+    },
+   
+    ".": {
+        "name":"cassaforte",
+        "description": "questa e' la cassaforte di casa, ci sono tutti i risparmi di Lucia e Agnese.",
+        "color": "green",
+        "interactions":  {
+            "no-item": {
+                "message": "Dentro ci sono un po' di monete",
+                "transform": "@"
+             }
+         }
+     },
+
+    "@": {
+        "name": "monete",
+        "description": "Possono tornare utili",
+        "color": "yellow",
+        "interactions": {
+            "no-item": {
+                "message": "le raccogli",
+                "pickup": true,
+                "transform": " "
+            }
+        }
+    },
+    "=": {
+        "name": "giornale delle pettegole",
+        "description": "questa e' la rivista preferita delle perpetue...",
+        "color": "cyan",
+        "interactions": {
+            "no-item": {
+                "message": "prendilo, se credi che ti possa essere utile...",
+                "pickup": true,
+                "transform": " "
+            }
+        }
+    },
     "L":  {
         "name": "Lucia",
-        "description": "triste e sconsolata",
-        "color": "magenta"
-    },
+        "description": "e' timida e impaurita",
+        "color": "magenta",
+        "interactions":  {
+            "no-item": {
+                "message": "Lucia: Speriamo che questo matrimonio funzioni, Renzo... Andiamo.",
+                "pickup": true,
+                "transform": " "
+            },
+            "@": {
+                "message": "Lucia: Ti ringrazio ma non ne ho bisogno..."
+             }
+         }
+         },
     "M": {
         "name": "Agnese, madre di Lucia",
         "color": "red",
@@ -11,40 +72,109 @@
         "interactions":  {
             "no-item": {
                 "message": "Agnese: Vai a cercare i testimoni per il matrimonio!"
+            },
+            "@": {
+                "message": "Agnese: sei molto gentile, grazie!",
+                "remove_from_inventory": true
+            },
+            "=": {
+                "message": "Agnese: Sembra interessante! Se vengo con voi posso leggerlo?",
+                "pickup": true,
+                "transform": " ",
+                "remove_from_inventory":true
             }
         }
     },
     "F": {
         "name": "Don Abbondio",
-        "description": "da suo comportamento non sembra affatto un prete",
+        "description": "Sembra poco credibile come curato...",
         "color": "black",
         "interactions": {
             "no-item": {
                 "message": "Don Abbondio: Sparisci! Non voglio altri guai!"
             },
             "T": {
-                "message": "Don Abbondio: Finalmente sei qui a pagare il tuo debito... vediamo un po' ",
+                "message": "Don Abbondio: Ah, finalmente sei qui a pagare il tuo debito. Vediamo un po'... ",
                 "transform": "O",
+                "remove_from_inventory": true
+            },
+            "@": {
+                "message": "Don Abbondio: Grazie della gentile offerta caro Renzo, il signore ti benedica...",
                 "remove_from_inventory": true
             }
         }
     },
     "O": {
         "name": "Don Abbondio",
-        "description": "sembra occupato, e' il tuo momento",
+        "description": "E' occupato a scrivere sul suo taccuino dei debiti... e' il tuo momento, pronunciate le promesse!",
         "color": "black",
         "interactions": {
             "no-item": {
-                "message": "Grazie ai suoi ottimi riflessi, scappa e chiede aiuto",
-                "transform": "X"
+                "message": "Anche Lucia deve pronunciare la frase!"
+            },
+            "L":{
+            "message": "Lucia non riesce a completare la frase e Abbondio riesce a scappare nonostante sia un vecchio decrepito!",
+            "transform": "X"
+             }
+         }
+    },
+    "V":{
+        "name": "Perpetua",
+        "description": "e' la serva di Don Abbondio",
+        "color": "cyan",
+        "interactions": {
+            "no-item":{
+                "message":"Perpetua: Ti pare questo il modo di arrivare a casa del curato?! Torna domani."
+            },
+            "M": {
+                "message": "Perpetua: Buongiorno Agnese, come va? Posso vedere quel tuo giornaletto? Renzo, il curato e' nell'altra stanza, prendi la chiave.",
+                "remove_from_inventory": true,
+                "transform": "K"
+            },
+            "@": {
+                "message": "Perpetua: Per me? Grazie!",
+                "remove_from_inventory": true
             }
         }
     },
+
+    "I":{
+        "name": "Porta",
+        "description": "conduce alla camera di Don Abbondio",
+        "color": "yellow",
+        "interactions": {
+            "no-item":{
+                "message": "e' chiusa a chiave, non puoi entrare ora."
+            },
+            "K":{
+                "message": "ottimo, ora puoi raggiungere Don Abbondio e sposare Lucia!",
+                "remove_from_inventory": true,
+                "transform": " "
+            }
+        }
+
+    },
+    "K":{
+        "name": "chiave",
+        "description": "servira' ad aprire la camera di Don Abbondio",
+        "color": "yellow",
+        "interactions":{
+            "no-item":{
+                "message":"hai preso la chiave",
+                "pickup": true,
+                "transform": " "
+            }
+        }
+    },
+
     "T": {
         "name": "Tonio",
         "description": "Un tuo caro amico",
         "color": "cyan",
         "interactions": {
+            "no-item":{
+                "message": "Tonio: Hai bisogno di testimoni per il matrimonio? ...beh e io ho bisogno di soldi per pagare il debito a Don Abbondio..."
+            },
             "@": {
                 "message": "Tonio: Se ti faro' da testimone mi pagherai il prestito? Accetto!",
                 "transform":" ",
@@ -53,74 +183,17 @@
             }
         }
     },
-    "1": {
-        "name": "porta",
-        "description": "e' una porta",
-        "color": "blue",
-        "interactions": {
-            "no-item": {
-                "message": "si apre",
-                "move_to_room": 1
-            }
-        }
-    },
-    "2": {
-        "name": "porta",
-        "description": "e' una porta",
-        "color": "blue",
-        "interactions": {
-            "no-item": {
-                "message": "si apre",
-                "move_to_room": 2
-            }
-        }
-    },
-    "0": {
-        "name": "porta",
-        "description": "e' una porta",
-        "color": "blue",
-        "interactions": {
-            "no-item": {
-                "message": "si apre",
-                "move_to_room": 0
-            }
-        }
-    },
-    "3": {
-        "name": "porta",
-        "description": "e' una porta",
-        "color": "blue",
-        "interactions": {
-            "no-item": {
-                "message": "si apre",
-                "move_to_room": 3
-            }
-        }
-    },
-
-    "@": {
-        "name": "monete",
-        "description": "Sono sempre utili",
-        "color": "yellow",
-        "interactions": {
-            "no-item": {
-                "message": "possono essere utili per convincere Tonio o Don Abbondio",
-                "pickup": true,
-                "transform": " "
-            }
-        }
-    },
 
     "C": {
         "name": "Fra Cristoforo",
-        "description": "Un frate buono che cerca sempre di aiutare i piu' deboli",
+        "description": "Un frate cappuccino che aiuta sempre i piu' deboli",
         "color": "black",
         "interactions": {
             "no-item": {
                 "message": "sembra stia pregando, meglio non disturbarlo"
             },
             "X": {
-                "message":"Fra Cristoforo ti consiglia di scappare a Milano, mentre Lucia e Agnese andranno a Monza",
+                "message":"Fra Cristoforo: Renzo, dovete rifugiarvi a Milano! Li' dovrai consegnare una lettera al Padre Bonaventura che vi aiutera'.",
                 "remove_from_inventory":true,
                 "transform": "R"
             }
@@ -129,13 +202,23 @@
 
     "B": {
         "name": "Bravo",
-        "description": "meglio stargi lontano",
-        "color": "green"
-    },
+        "description": "non ha un'aria amichevole e porta diversi coltelli con se'...",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+            "message": "Bravo: tu non mi piaci e non dovevi avvicinarti!",
+            "game_over": true
+             },
+            "@": {
+            "message": "Bravo: queste adesso sono mie!",
+            "remove_from_inventory": true
+             }
+         }
+        },
 
-    "P": {
+    "N": {
         "name": "Pane",
-        "description": "Un pezzo di pane",
+        "description": "e' fatto con farina raffinata dei nobili",
         "color": "yellow",
         "interactions": {
             "no-item": {
@@ -146,8 +229,8 @@
     },
 
     "R": {
-        "name": "Lettera di raccomandazioni",
-        "description": "Ti servira' a Milano",
+        "name": "Lettera",
+        "description": "contiene informazioni per il Padre Bonaventura",
         "color": "blue",
         "interactions": {
             "no-item": {
@@ -164,16 +247,76 @@
         "color": "yellow",
         "interactions": {
             "no-item": {
-                "message": "Menico: Scappate al monastero! A casa vostra ci sono dei criminali",
+                "message": "Menico: Andiamo al monastero, Fra Cristoforo vi aiutera'!",
                 "transform": " ",
                 "pickup": true
             }
         }
     },
 
+    "G": {
+        "name": "Frate",
+        "description": "e' il guardiano del monastero, solo lui puo' sapere dove si trova Padre Bonaventura.",
+        "color": "black",
+        "interactions": {
+            "no-item":{
+                "message": "Frate: Salve buon uomo, di cosa avete bisogno?"
+            },
+            "R": {
+                "message": "Padre: Quando Padre Bonaventura tornera' in monastero gliela faro' avere e sono sicuro che vi aiutera' a sposarvi",
+                "win": true
+            }
+        }
+    },
+    
+    "0": {
+        "name": "porta",
+        "description": "porta di casa Mondella",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 0
+            }
+        }
+    },
+     "1": {
+        "name": "porta",
+        "description": "porta della casa del curato",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 1
+            }
+        }
+    },
+
+    "2": {
+        "name": "porta",
+        "description": "entrata della piazza",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 2
+            }
+        }
+    },
+    "3": {
+        "name": "porta",
+        "description": "porta dell'osteria",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "si apre",
+                "move_to_room": 3
+            }
+        }
+    },
     "4": {
         "name": "porta",
-        "description": "e' una porta",
+        "description": "entrata al monastero",
         "color": "blue",
         "interactions": {
             "no-item": { 
@@ -182,10 +325,21 @@
             }
         }
     },
+    "7": {
+        "name": "porta",
+        "description": "entrata",
+        "color": "blue",
+        "interactions": {
+            "no-item": { 
+                "message": "si apre",
+                "move_to_room": 7
+            }
+        }
+    },
 
     "5": {
         "name": "porta",
-        "description": "e' una porta",
+        "description": "entrata",
         "color": "blue",
         "interactions": {
             "no-item": { 
@@ -205,15 +359,15 @@
             }
         }  
     },
-    "G": {
-        "name": "Padre guardiano",
-        "description": "gli chiedi di poter incontrare Padre Bonaventura ma non ti ascolta",
-        "color": "black",
+    "8": {
+        "name": "porta",
+        "description": "entrata",
+        "color": "blue",
         "interactions": {
-            "R": {
-                "message": "Padre: Quando padre Bonaventura tornera' in monastero gliela faro' avere",
-                "win": true
+            "no-item": { 
+                "message": "si apre",
+                "move_to_room": 8
             }
-        }
+        }  
     }
 }

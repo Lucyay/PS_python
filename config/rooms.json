@@ -1,41 +1,51 @@
 {
     "0": {
         "name": "Casa Mondella",
-        "description": "C'e' molta agitazione a causa del matrimonio a sorpresa",
+        "description": "C'e' molta agitazione qui, si sta tramando qualcosa...",
         "color": "white"
     },
 
     "1": {
         "name": "Casa di Don Abbondio",
-        "description": "E' tutto molto in ordine",
+        "description": "E' tutto molto in ordine e tranquillo.",
         "color": "white"
     },
     
     "2": {
-        "name": "Piazza del paese",
-        "description": "affollata come sempre",
-        "color": "green"
-    },
-
-    "3": {
-        "name": "Osteria",
-        "description": "Si mangia molto bene qui",
+        "name": "Piazza di Lecco",
+        "description": "E' affollata come sempre.",
         "color": "yellow"
     },
 
+    "3": {
+        "name": "Osteria di Lecco",
+        "description": "Dicono che qui si mangi molto bene.",
+        "color": "magenta"
+    },
+
    "4": {
-        "name": "Monastero",
-        "description": "Grande e silenzioso",
+        "name": "Monastero di Pescarenico",
+        "description": "In questo luogo molto grande e silenzioso c'e' solo Fra Cristoforo...",
         "color": "blue"
     },
     "5": {
-        "name": "Milano",
-        "description": "C'e' qualcosa di strano",
-        "color": "white"
+        "name": "Piazza di Milano",
+        "description": "Anche qui c'e' qualcosa di strano...",
+        "color": "yellow"
     },
     "6": {
         "name": "Monastero di Milano",
-        "description": "Grande e silenzioso",
+        "description": "E' qui che dovresti trovare Padre Bonaventura...",
         "color": "blue"
+    },
+    "7": {
+        "name": "Strada per il monastero di Pescarenico",
+        "description": "E' lunga alcuni chilometri...",
+        "color": "yellow"
+    },
+    "8": {
+        "name": "Strada per Milano",
+        "description": "E' lunga alcuni chilometri...",
+        "color": "yellow"
     }
 }
