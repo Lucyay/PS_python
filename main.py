@@ -145,7 +145,7 @@ class Mobile(Entity):
 
 class Player(Mobile):
     def __init__(self, room, x, y):
-        Mobile.__init__(self, room, x, y, "P", Bg.blue)
+        Mobile.__init__(self, room, x, y, "R", Bg.red)
         self.inventory = {}
 
     def draw_inventory(self):
@@ -197,7 +197,7 @@ class Game:
 
     def win(self, message):
         print(message)
-        print(Fg.green + "HAI VINTO!" + Fg.rs)
+        print(Fg.green + "To be continued..." + Fg.rs)
         input()
         exit()
 
